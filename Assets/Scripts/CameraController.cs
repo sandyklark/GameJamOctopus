@@ -30,7 +30,7 @@ public class CameraController : MonoBehaviour
              
             float distance = Vector3.Distance(target1.position, target2.position);
             float newSize = Mathf.Lerp(minSize,maxSize , distance / sizeLimiter);
-            camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, newSize, Time.deltaTime);
+            camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, newSize + 1.5f, Time.deltaTime);
             midpoint.z = -10;
             transform.position = Vector3.SmoothDamp(transform.position, midpoint, ref velocity, smoothTime);
         }
