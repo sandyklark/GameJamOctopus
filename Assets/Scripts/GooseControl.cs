@@ -18,7 +18,10 @@ public class GooseControl : MonoBehaviour
     
     public void Jump(InputAction.CallbackContext action)
     {
-        _shouldJump = true;
+        if (action.started)
+        {
+            _shouldJump = true;
+        }
     }
     
     public void Attack(InputAction.CallbackContext action)
