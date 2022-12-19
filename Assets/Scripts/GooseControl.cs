@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GooseControl : MonoBehaviour
 {
@@ -8,29 +9,46 @@ public class GooseControl : MonoBehaviour
     public float moveSpeed = 20f;
     private bool _shouldJump;
 
-    private void Update()
+    private Vector2 _moveDirection;
+    
+    public void Move(InputAction.CallbackContext move)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            _shouldJump = true;
-        }
+        _moveDirection = move.ReadValue<Vector2>();
     }
+    
+    public void Jump(InputAction.CallbackContext action)
+    {
+        _shouldJump = true;
+    }
+    
+    public void Attack(InputAction.CallbackContext action)
+    {
+       Debug.Log("Honk");
+    }
+    
+    // private void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.Space))
+    //     {
+    //         _shouldJump = true;
+    //     }
+    // }
     
     private void FixedUpdate()
     {
-        var moveVector = new Vector2();
+        // var moveVector = new Vector2();
         
-        if (Input.GetKey(KeyCode.A))
-        {
-            moveVector.x = -1;
-        }
-        
-        if (Input.GetKey(KeyCode.D))
-        {
-            moveVector.x = 1;
-        }
+        // if (Input.GetKey(KeyCode.A))
+        // {
+        //     moveVector.x = -1;
+        // }
+        //
+        // if (Input.GetKey(KeyCode.D))
+        // {
+        //     moveVector.x = 1;
+        // }
 
-        footRigid.AddForce(moveVector * moveSpeed, ForceMode2D.Force);
+        footRigid.AddForce(_moveDirection * moveSpeed, ForceMode2D.Force);
         
         if (_shouldJump)
         {
