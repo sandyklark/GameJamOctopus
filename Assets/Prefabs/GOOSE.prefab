@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394878910732277706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.03, y: -2.93, z: 0}
+  m_LocalPosition: {x: 0.04, y: -3.39, z: 0}
   m_LocalScale: {x: 1.118331, y: 1.118331, z: 1.118331}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -155,10 +155,10 @@ MonoBehaviour:
   legStemR: {fileID: 7394878912414764052}
   lineL: {fileID: 7394878911162415032}
   lineR: {fileID: 7394878911214839424}
-  legLength: 4
-  updateDistanceL: 2
-  updateDistanceR: 2.5
-  offset: {x: 0, y: -1.5}
+  legLength: 3.5
+  updateDistanceL: 1.8
+  updateDistanceR: 2.2
+  offset: {x: 0, y: -1}
 --- !u!114 &7394878911122748452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
   head: {fileID: 7394878910732277717}
   body: {fileID: 7394878912340275624}
   neck: {fileID: 7394878911943647649}
-  offset: {x: 0, y: 2}
+  offset: {x: 0, y: -1}
   headDist: 4
 --- !u!114 &2996384037135606169
 MonoBehaviour:
@@ -205,6 +205,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7394878911122748634}
         m_TargetAssemblyTypeName: GooseControl, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7394878911122748452}
+        m_TargetAssemblyTypeName: GooseHead, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
         m_Arguments:
@@ -814,7 +826,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394878911794766764}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6052965, y: 6.7194963, z: 0}
+  m_LocalPosition: {x: -0.36, y: 4.21, z: 0}
   m_LocalScale: {x: 2.3280635, y: 9.2395, z: 3.6958}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -846,7 +858,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394878911943647654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.06, y: -2.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -987,7 +999,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394878912340275631}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 8.475, z: 0}
+  m_LocalPosition: {x: 0, y: 6.05, z: 0}
   m_LocalScale: {x: 1.9782485, y: 6.2809386, z: 3.1404693}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1086,7 +1098,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394878912414764053}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5820159, y: 6.7194963, z: 0}
+  m_LocalPosition: {x: 0.37, y: 3.83, z: 0}
   m_LocalScale: {x: 2.3280635, y: 9.2395, z: 3.6958}
   m_ConstrainProportionsScale: 0
   m_Children: []
