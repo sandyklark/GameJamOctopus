@@ -474,6 +474,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4373438110283929285, guid: 952d58fb73516294e9a986575023e332, type: 3}
+      propertyPath: m_SortingOrder
+      value: -9
+      objectReference: {fileID: 0}
     - target: {fileID: 4878294385608277252, guid: 952d58fb73516294e9a986575023e332, type: 3}
       propertyPath: m_Name
       value: Chair_L
@@ -2858,6 +2862,10 @@ PrefabInstance:
     - target: {fileID: 9138061918464854250, guid: 1121189d30fe3c84496bad30554c4add, type: 3}
       propertyPath: m_Name
       value: Table
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138061918464854251, guid: 1121189d30fe3c84496bad30554c4add, type: 3}
+      propertyPath: m_SortingOrder
+      value: -9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1121189d30fe3c84496bad30554c4add, type: 3}
@@ -7323,7 +7331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5949386435810320085, guid: c67b04abf04e5664787e015bc4b9cb24, type: 3}
       propertyPath: m_SortingOrder
-      value: 50
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 5949386435810320090, guid: c67b04abf04e5664787e015bc4b9cb24, type: 3}
       propertyPath: m_RootOrder
@@ -7831,6 +7839,10 @@ PrefabInstance:
     - target: {fileID: 2698845691130707040, guid: 952d58fb73516294e9a986575023e332, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373438110283929285, guid: 952d58fb73516294e9a986575023e332, type: 3}
+      propertyPath: m_SortingOrder
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 4878294385608277252, guid: 952d58fb73516294e9a986575023e332, type: 3}
       propertyPath: m_Name
@@ -13070,7 +13082,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8602090986780779187, guid: f4bd626ce459cd843aa9693381234942, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f4bd626ce459cd843aa9693381234942, type: 3}
 --- !u!4 &1863123512 stripped
 Transform:
