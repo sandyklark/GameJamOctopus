@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -45,7 +46,14 @@ public class GameManager : MonoBehaviour
     public float InitialTimeSeconds;
 
     private bool _isGameOver;
-    
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
     // private void Update()
     // {
     //     if (_isGameOver) return;
