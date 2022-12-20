@@ -32,7 +32,7 @@ public class GooseHead : MonoBehaviour
         SetDirection(_moveDirection);
 
         _targetPos = ((Vector2)body.position + _targetDirection.normalized * headDist) + offset;
-        head.position = Vector3.Lerp(head.position, (Vector3)_targetPos, Time.deltaTime * 8f);
+        head.position = Vector3.Lerp(head.position, (Vector3)_targetPos, Time.deltaTime * 15f);
 
         neck.SetPositions(new []{body.transform.position, head.transform.position});
     }

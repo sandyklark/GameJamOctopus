@@ -27,10 +27,11 @@ public class CameraController : MonoBehaviour
         if (target1 && target2)
         {
             Vector3 midpoint = (target1.position + target2.position) / 2f;
-             
+            midpoint.y += 2f; 
+            
             float distance = Vector3.Distance(target1.position, target2.position);
             float newSize = Mathf.Lerp(minSize,maxSize , distance / sizeLimiter);
-            camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, newSize + 2, Time.deltaTime);
+            camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, newSize + 2, Time.deltaTime * 2f);
             midpoint.z = -10;
             transform.position = Vector3.SmoothDamp(transform.position, midpoint, ref velocity, smoothTime);
         }
