@@ -6094,7 +6094,7 @@ GameObject:
   - component: {fileID: 7394878910732277716}
   m_Layer: 2
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Duck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6182,9 +6182,10 @@ GameObject:
   - component: {fileID: 7394878911122748453}
   - component: {fileID: 7394878911122748452}
   - component: {fileID: 2996384037135606169}
+  - component: {fileID: 2132050859}
   m_Layer: 2
   m_Name: GOOSE
-  m_TagString: Untagged
+  m_TagString: Duck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6411,6 +6412,22 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &2132050859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394878911122748632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 738d86f66e0a44a41bfc82cbf58888dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 4
+  CanTakeDamage: 1
+  HealthUI: {fileID: 0}
+  GameManager: {fileID: 0}
 --- !u!1 &7394878911162415038
 GameObject:
   m_ObjectHideFlags: 0
@@ -6423,7 +6440,7 @@ GameObject:
   - component: {fileID: 7394878911162415032}
   m_Layer: 2
   m_Name: LegL
-  m_TagString: Untagged
+  m_TagString: Duck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6563,7 +6580,7 @@ GameObject:
   - component: {fileID: 7394878911214839424}
   m_Layer: 2
   m_Name: LegR
-  m_TagString: Untagged
+  m_TagString: Duck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6703,7 +6720,7 @@ GameObject:
   - component: {fileID: 7394878911744624847}
   m_Layer: 2
   m_Name: Beak
-  m_TagString: Untagged
+  m_TagString: Duck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6789,7 +6806,7 @@ GameObject:
   - component: {fileID: 241367467}
   m_Layer: 2
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Duck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6916,7 +6933,7 @@ GameObject:
   - component: {fileID: 7394878911794766767}
   m_Layer: 2
   m_Name: LegStemL
-  m_TagString: Untagged
+  m_TagString: Duck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7089,7 +7106,7 @@ GameObject:
   - component: {fileID: 375082986}
   m_Layer: 2
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Duck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7191,7 +7208,7 @@ GameObject:
   - component: {fileID: 7394878912414764052}
   m_Layer: 2
   m_Name: LegStemR
-  m_TagString: Untagged
+  m_TagString: Duck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

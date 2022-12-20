@@ -30,6 +30,10 @@ public class BreadStages : MonoBehaviour
             {
                 rigid.AddTorque(Random.Range(-8f, 8), ForceMode2D.Impulse);
             });
+
+        var centerPoint = GetComponentInChildren<BreadCenterPoint>(true).transform;
+        var centerTransform = breadStages[_index].GetComponentsInChildren<SpriteRenderer>()[1].transform.parent;
+        centerPoint.SetParent(centerTransform);
     }
     
     private void Awake()
