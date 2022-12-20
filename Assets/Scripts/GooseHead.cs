@@ -7,6 +7,9 @@ public class GooseHead : MonoBehaviour
     public Transform body;
     public LineRenderer neck;
 
+    public GameObject normalFace;
+    public GameObject biteFace;
+    
     public Vector2 offset;
     public float headDist = 4f;
     
@@ -26,24 +29,6 @@ public class GooseHead : MonoBehaviour
 
     private void Update()
     {
-        // var dir = new Vector2();
-        // if (Input.GetKey(KeyCode.A))
-        // {
-        //     dir.x = -1f;
-        // }
-        // if (Input.GetKey(KeyCode.D))
-        // {
-        //     dir.x = 1f;
-        // }
-        // if (Input.GetKey(KeyCode.W))
-        // {
-        //     dir.y = 1f;
-        // }
-        // if (Input.GetKey(KeyCode.S))
-        // {
-        //     dir.y = -1f;
-        // }
-        
         SetDirection(_moveDirection);
 
         _targetPos = ((Vector2)body.position + _targetDirection.normalized * headDist) + offset;

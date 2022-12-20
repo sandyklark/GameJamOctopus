@@ -4,6 +4,8 @@ using Vector2 = UnityEngine.Vector2;
 public class GooseLeg : MonoBehaviour
 {
     public Rigidbody2D body;
+    public Transform footL;
+    public Transform footR;
     public Transform legStemL;
     public Transform legStemR;
     public LineRenderer lineL;
@@ -30,11 +32,16 @@ public class GooseLeg : MonoBehaviour
         UpdateLeg(legStemL, lineL, ref _currentPosL, ref _nextPosL, true);
         UpdateLeg(legStemR, lineR, ref _currentPosR, ref _nextPosR, false);
 
-        _currentPosL = Vector2.Lerp(_currentPosL, _nextPosL, Time.deltaTime * 30f);
-        _currentPosR = Vector2.Lerp(_currentPosR, _nextPosR, Time.deltaTime * 30f);
+        var lOffset = Mathf.Abs(_currentPosL.x - _nextPosL.x) > 0.5f ? 1.5f : 0f;
+        var rOffset = Mathf.Abs(_currentPosR.x - _nextPosR.x) > 0.5f ? 1.5f : 0f;
         
+        _currentPosL = Vector2.Lerp(_currentPosL, _nextPosL + new Vector2(0f, lOffset), Time.deltaTime * 29f);
+        _currentPosR = Vector2.Lerp(_currentPosR, _nextPosR + new Vector2(0f, rOffset), Time.deltaTime * 33f);
+
         lineL.SetPositions(new []{legStemL.position, (Vector3)_currentPosL});
         lineR.SetPositions(new []{legStemR.position, (Vector3)_currentPosR});
+        footL.position = _currentPosL;
+        footR.position = _currentPosR;
     }
 
     private void UpdateLeg(Transform legStem, LineRenderer line, ref Vector2 current, ref Vector2 next, bool isLeft)
