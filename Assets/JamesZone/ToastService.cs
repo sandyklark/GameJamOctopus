@@ -8,15 +8,21 @@ public class ToastService : MonoBehaviour
 
     public Transform SpawnPoint;
 
+    public static ToastService Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
-        SpawnToast("You're Toast");
+        //SpawnToast("You're Toast");
     }
 
-    public void SpawnToast(string text)
+    public void SpawnToast(string text, Sprite sprite)
     {
         ToastPopup toast = Instantiate(ToastPopup, SpawnPoint);
-        ToastPopup.Text.text = text; 
+        toast.Setup(text, sprite);
         Destroy(toast, 5);
     }
 }
