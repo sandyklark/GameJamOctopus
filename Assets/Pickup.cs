@@ -19,17 +19,17 @@ public class Pickup : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Bread")  )
+        if (col.gameObject.CompareTag("Bread") )
         {
           ToastService.Instance.SpawnToast(ToastText, Sprite);
           GameManager.Instance.GooseScore += Score; 
            Destroy(this.gameObject);
         }
-        if ( col.gameObject.CompareTag("Duck") )
-        {
-            ToastService.Instance.SpawnToast(ToastText, Sprite);
-            GameManager.Instance.GooseScore += Score; 
-            Destroy(this.gameObject);
-        }
+        // if ( col.gameObject.CompareTag("Duck") )
+        // {
+        //     //ToastService.Instance.SpawnToast("Quack", Sprite);
+        //     // GameManager.Instance.GooseScore += Score; 
+        //     // Destroy(this.gameObject);
+        // }
     }
 }

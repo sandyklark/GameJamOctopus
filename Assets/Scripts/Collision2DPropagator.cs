@@ -25,6 +25,10 @@ public class Collision2DPropagator : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Trigger?.Invoke();
+        if (col.gameObject.CompareTag("Duck"))
+        {
+            Trigger?.Invoke();
+        }
+       
     }
 }

@@ -10,6 +10,8 @@ public class BreadStages : MonoBehaviour
     private List<Transform> _centerPoints;
     private int _index;
 
+    public Health Health;
+
     private void Next()
     {
         breadStages[_index].SetActive(false);
@@ -21,6 +23,7 @@ public class BreadStages : MonoBehaviour
         if (_index >= breadStages.Count - 1) return;
         
         _index++;
+        Health.TakeDamage();
         breadStages[_index].transform.position = center;
         breadStages[_index].SetActive(true);
 
@@ -34,6 +37,7 @@ public class BreadStages : MonoBehaviour
         var centerPoint = GetComponentInChildren<BreadCenterPoint>(true).transform;
         var centerTransform = breadStages[_index].GetComponentsInChildren<SpriteRenderer>()[1].transform.parent;
         centerPoint.SetParent(centerTransform);
+        
     }
     
     private void Awake()

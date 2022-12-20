@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IntroManager : MonoBehaviour
 {
@@ -19,10 +20,11 @@ public class IntroManager : MonoBehaviour
 
     public void EndSlide()
     {
-        for (int i = 0; i < _introPanelList.Count; i++)
-        {
-            _introPanelList[i].SetActive(false);
-        }
-        ParentPanel.SetActive(false);
+        // for (int i = 0; i < _introPanelList.Count; i++)
+        // {
+        //     _introPanelList[i].SetActive(false);
+        // }
+        // ParentPanel.SetActive(false);
+        SceneManager.LoadScene(2);
     }
 }

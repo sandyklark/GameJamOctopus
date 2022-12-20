@@ -5,7 +5,7 @@ public class HurtTrigger : MonoBehaviour
 {
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Bread") || other.gameObject.CompareTag("Duck"))
+        if ( other.gameObject.CompareTag("Duck"))
         {
             Health health = other.gameObject.GetComponentInParent<Health>(); 
             health.TakeDamage();

@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 463463063269282326}
   m_Layer: 2
   m_Name: BiteTrigger
-  m_TagString: Untagged
+  m_TagString: Duck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
