@@ -801,9 +801,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00000011920929, y: 0}
+  m_Offset: {x: 0.27, y: -0.08}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.04
 --- !u!1 &1744623941942222968
 GameObject:
   m_ObjectHideFlags: 0
@@ -6267,7 +6267,7 @@ MonoBehaviour:
   neck: {fileID: 7394878911943647649}
   normalFace: {fileID: 7371465001078279605}
   biteFace: {fileID: 4777438165159270309}
-  offset: {x: 2.5, y: 0}
+  offset: {x: 2.5, y: -0.5}
   headDist: 3
 --- !u!114 &2996384037135606169
 MonoBehaviour:

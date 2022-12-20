@@ -10,7 +10,7 @@ public class BreadStages : MonoBehaviour
     private List<Transform> _centerPoints;
     private int _index;
 
-    public void Next()
+    private void Next()
     {
         breadStages[_index].SetActive(false);
         var center = _centerPoints[_index].transform.position;
@@ -41,8 +41,20 @@ public class BreadStages : MonoBehaviour
             stage.SetActive(false);
             var center = stage.GetComponentsInChildren<SpriteRenderer>()[1].transform.parent;
             _centerPoints.Add(center);
-            Debug.Log(center.gameObject.name);
+
+            var trigger = stage.GetComponent<BiteTrigger>().Triggered += OnTriggered;
         });
+    }
+
+    private float _lastTriggered;
+    private float _triggerThresholdSeconds = 0.5f;
+    private void OnTriggered()
+    {
+        if (Time.realtimeSinceStartup > _lastTriggered + _triggerThresholdSeconds)
+        {
+            Next();
+            _lastTriggered = Time.realtimeSinceStartup;
+        }
     }
 
     private void Start()
